@@ -29,7 +29,7 @@ client.on("message", message => {
 		let username = message.author.username;
 		let channel = client.channels.cache.find(ch => ch.name === "test-bot");
 		if (channel == undefined) return;
-		channel.send(`s!points add ${username} Wordle ${score}`);
+		channel.send(`s!points add "${username}" Wordle ${score}`);
 	} catch (error) {
 		console.log(error);
 	}
