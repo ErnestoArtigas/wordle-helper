@@ -23,6 +23,8 @@ client.on("message", message => {
 	if (args[0] != "Wordle") return;
 
 	try {
+		console.log("arguments : ", args);
+		console.log("arguments[2] : ", args[2]);
 		let index = args[2].split("/")[0];
 		if (scoreMap.get(index) == undefined) return;
 		let score = scoreMap.get(index);
